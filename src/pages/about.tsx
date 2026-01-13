@@ -53,17 +53,17 @@ export default function About() {
 
           <section className="text-zinc-100 text-lg prose prose-sm prose-pink prose-img:rounded-xl prose-invert">
             <p>
-              Hey there! My full name is <b>Joshua Tanri</b>. You can find me
-              online with my username <b>Edqe_</b> or <b>Edqe14</b>. I&apos;m a
-              Fullstack Web Developer and also somewhat a Designer.
+              Hey there! My full name is <b>Sergant Michael Cross</b>. You can find me
+              online with my username <b>Sergant Cross</b> or <b>Crosser</b>. I&apos;m a
+              SCVN's Head 2nd Commander, RedStar Division.
             </p>
 
             <h2>History</h2>
 
             <p>
-              First time I started to code is around early 2018, where I use
-              Javascript to make Discord bots. Then around 2021, I started to
-              shift towards web development and{' '}
+              First time I started to code is around early 2021, where I use
+              C++ to make simple mathematics programmes. Then around later 2021, I started to
+              shift towards frontend web development and{' '}
               <a
                 href="https://www.typescriptlang.org/"
                 target="_blank"
