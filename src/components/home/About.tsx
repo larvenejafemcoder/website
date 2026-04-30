@@ -93,9 +93,9 @@ export default function About() {
       if (!canvasRef.current) return;
 
       canvasRef.current.style.webkitMaskImage =
-        '-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));';
+        '-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.4)));';
       canvasRef.current.style.maskImage =
-        'linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0))';
+        'linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.4))';
     };
 
     const globe = createGlobe(canvasRef.current, {
@@ -114,7 +114,7 @@ export default function About() {
       opacity: 0.7,
       markers: [
         // longitude latitude
-        { location: [-0.035309, 109.296531], size: 0.05 },
+        { location: [108.2772, 14.0583], size: 0.05 },
       ],
       onRender: (state) => {
         updatePhi();
@@ -165,8 +165,8 @@ export default function About() {
                   className="text-[24px] md:text-5xl xl:text-6xl font-medium tracking-tighter flex items-center leading-[0.8] pr-[2px]"
                   style={{ transform: 'translateX(100%)' }}
                 >
-                  <Emoji code="1f1ee-1f1e9" className="mr-5" />
-                  FROM INDONESIA
+                  <Emoji code="1f1fb-1f1f3" className="mr-5" />
+                  FROM VIETNAM
                 </h2>
               </section>
             </section>
@@ -185,9 +185,9 @@ export default function About() {
               className="w-[384px] h-[384px] scale-[1.4] md:scale-[1.8] aspect-square absolute bottom-32 lg:bottom-40 left-1/2 -translate-x-1/2 z-[-1] opacity-70"
               style={{
                 maskImage:
-                  'linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0))',
+                  'linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.4))',
                 WebkitMaskImage:
-                  '-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))',
+                  '-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.4)))',
               }}
             />
           </section>

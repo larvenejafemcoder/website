@@ -9,7 +9,7 @@ import Lenis from '@studio-freight/lenis';
 import useLenis from '@/hooks/useLenis';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { raf } from '@studio-freight/tempus';
+import raf from '@studio-freight/tempus';
 import MouseFollower from 'mouse-follower';
 
 import Burger from '@/components/Burger';
