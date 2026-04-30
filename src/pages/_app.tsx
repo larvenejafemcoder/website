@@ -9,7 +9,7 @@ import Lenis from '@studio-freight/lenis';
 import useLenis from '@/hooks/useLenis';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import raf from '@studio-freight/tempus';
+import tempus from '@studio-freight/tempus';
 import MouseFollower from 'mouse-follower';
 
 import Burger from '@/components/Burger';
@@ -19,6 +19,10 @@ import dynamic from 'next/dynamic';
 import { isMobile } from 'react-device-detect';
 import posthog from 'posthog-js';
 import { PostHogProvider } from 'posthog-js/react';
+
+const raf = tempus as unknown as {
+  add: (callback: (time: number) => void, priority?: number) => () => void;
+};
 
 const Menu = dynamic(() => import('@/components/Menu'), { ssr: false });
 
@@ -38,7 +42,7 @@ gsap.ticker.remove(gsap.updateRoot);
 
 if (typeof window !== 'undefined') {
   // checks that we are client-side
-  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
+  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY as string, {
     api_host:
       process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com',
     loaded: (hog) => {
