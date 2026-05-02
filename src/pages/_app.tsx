@@ -2,14 +2,14 @@ import '@/styles/globals.css';
 import 'mouse-follower/dist/mouse-follower.min.css';
 import type { AppProps } from 'next/app';
 
-import { Inter, Playfair_Display as Playfair } from '@next/font/google';
+import { Inter, Playfair_Display as Playfair } from 'next/font/google';
 import cn from 'classnames';
 import { useEffect } from 'react';
-import Lenis from '@studio-freight/lenis';
+import Lenis from 'lenis';
 import useLenis from '@/hooks/useLenis';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import tempus from '@studio-freight/tempus';
+import Tempus from 'tempus';
 import MouseFollower from 'mouse-follower';
 
 import Burger from '@/components/Burger';
@@ -20,7 +20,7 @@ import { isMobile } from 'react-device-detect';
 import posthog from 'posthog-js';
 import { PostHogProvider } from 'posthog-js/react';
 
-const raf = tempus as unknown as {
+const raf = Tempus as unknown as {
   add: (callback: (time: number) => void, priority?: number) => () => void;
 };
 

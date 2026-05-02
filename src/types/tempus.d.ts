@@ -1,11 +1,28 @@
-declare module '@studio-freight/tempus' {
-  type RafCallback = (time: number, deltaTime: number) => void;
-  class Raf {
-    add: (callback: RafCallback, priority = 0) => () => void;
+declare module 'tempus' {
+  type TempusCallback = (
+    time: number,
+    deltaTime: number,
+    frameCount: number,
+  ) => void;
+  type TempusOptions = {
+    priority?: number;
+    fps?: number | string;
+    label?: string;
+    idle?: number;
+  };
+  type UID = number;
+  class TempusImpl {
+    add(
+      callback: TempusCallback,
+      options?: TempusOptions,
+    ): (() => void) | undefined;
 
-    remove: (callback: RafCallback) => void;
+    play(): void;
+
+    pause(): void;
+
+    get isPlaying(): boolean;
   }
-
-  // eslint-disable-next-line import/prefer-default-export
-  export const raf: Raf;
+  const Tempus: TempusImpl;
+  export default Tempus;
 }
