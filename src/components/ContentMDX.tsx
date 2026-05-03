@@ -3,7 +3,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from '@phosphor-icons/react';
 
-import { useMDXComponent } from 'next-contentlayer/hooks';
+import { useMDXComponent } from 'next-contentlayer2/hooks';
 import { AnchorHTMLAttributes, DetailedHTMLProps, FC } from 'react';
 import classNames from 'classnames';
 import Image from 'next/image';

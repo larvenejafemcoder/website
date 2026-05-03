@@ -1,4 +1,4 @@
-import { defineDocumentType, makeSource } from 'contentlayer/source-files';
+import { defineDocumentType, makeSource } from 'contentlayer2/source-files';
 import highlight from 'rehype-highlight';
 
 export const calculateReadingTime = (text) => {
