@@ -1,0 +1,31 @@
+---
+const links = [
+  { href: '/#hero', label: 'NODE_00' },
+  { href: '/#about', label: 'NODE_01' },
+  { href: '/#projects', label: 'NODE_02' },
+  { href: '/#skills', label: 'NODE_03' },
+  { href: '/#contact', label: 'NODE_04' },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
+  <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+    <a href="/" class="text-sm font-mono text-text-primary hover:text-neon-purple transition-colors duration-300">
+      <span class="text-neon-purple">></span> neon_sanctuary
+    </a>
+    <ul class="hidden md:flex items-center gap-8">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="font-mono text-xs tracking-widest text-text-muted hover:text-neon-purple transition-all duration-300 hover:glow-purple uppercase"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</nav>

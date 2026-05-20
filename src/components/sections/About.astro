@@ -1,0 +1,82 @@
+---
+import ThreeSceneWrapper from '../three/ThreeSceneWrapper.astro';
+
+
+---
+
+<section id="about" class="relative w-full min-h-screen flex items-center py-32 overflow-hidden">
+  <ThreeSceneWrapper containerId="about-scene" scene="about" />
+
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="font-mono text-xs text-neon-violet mb-4 tracking-widest">NODE_01 // IDENTITY</p>
+        <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-8">
+          <span class="text-text-primary">Digital</span><br />
+          <span class="text-transparent bg-clip-text bg-gradient-neon">Architect</span>
+        </h2>
+
+        <div class="space-y-4 text-text-secondary leading-relaxed">
+          <p class="font-mono text-sm">
+            <span class="text-neon-purple">{'>'}</span> I'm a self-taught software engineer obsessed with
+            systems programming, low-level internals, and the art of building
+            things that feel alive.
+          </p>
+          <p class="font-mono text-sm">
+            <span class="text-neon-purple">{'>'}</span> From porting Minecraft Beta to C# to implementing
+            C standard library internals — I dive deep into how things work
+            under the hood.
+          </p>
+          <p class="font-mono text-sm">
+            <span class="text-neon-purple">{'>'}</span> Currently exploring the intersection of
+            cyberpunk aesthetics, game engine architecture, and systems-level
+            software.
+          </p>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a
+            href="/CV.pdf"
+            target="_blank"
+            class="group inline-flex items-center gap-2 px-6 py-3 font-mono text-xs uppercase tracking-widest text-neon-cyan border border-neon-cyan rounded-sm transition-all duration-300 hover:bg-neon-cyan hover:text-bg-primary hover:shadow-glow-cyan"
+          >
+            <span>View CV</span>
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="relative aspect-square max-w-sm mx-auto">
+          <div class="absolute inset-0 bg-gradient-neon opacity-20 blur-3xl rounded-full"></div>
+          <div class="relative w-full h-full rounded-full border border-glass-border bg-glass-bg backdrop-blur-sm flex items-center justify-center overflow-hidden">
+            <div class="text-center p-8">
+              <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-neon p-[2px]">
+                <div class="w-full h-full rounded-full bg-bg-primary flex items-center justify-center">
+                  <span class="text-4xl font-bold text-neon-purple">TS</span>
+                </div>
+              </div>
+              <p class="font-mono text-sm text-text-secondary">Tom Schmidt</p>
+              <p class="font-mono text-xs text-text-muted mt-1">// Kernel Spectre</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 mt-8">
+          <div class="text-center p-4 border border-border-subtle rounded-sm bg-glass-bg backdrop-blur-sm">
+            <p class="text-2xl font-bold text-neon-purple">4+</p>
+            <p class="font-mono text-xs text-text-muted mt-1">YEARS CODING</p>
+          </div>
+          <div class="text-center p-4 border border-border-subtle rounded-sm bg-glass-bg backdrop-blur-sm">
+            <p class="text-2xl font-bold text-neon-magenta">8</p>
+            <p class="font-mono text-xs text-text-muted mt-1">LANGUAGES</p>
+          </div>
+          <div class="text-center p-4 border border-border-subtle rounded-sm bg-glass-bg backdrop-blur-sm">
+            <p class="text-2xl font-bold text-electric-blue">30+</p>
+            <p class="font-mono text-xs text-text-muted mt-1">PROJECTS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

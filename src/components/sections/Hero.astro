@@ -1,0 +1,60 @@
+---
+import ThreeSceneWrapper from '../three/ThreeSceneWrapper.astro';
+---
+
+<section id="hero" class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+  <ThreeSceneWrapper containerId="hero-scene" scene="hero" />
+
+  <div class="relative z-10 px-6 text-center max-w-5xl mx-auto">
+    <div class="mb-6">
+      <p class="font-mono text-xs md:text-sm text-neon-purple tracking-[0.3em] uppercase mb-4 animate-pulse-glow">
+        <span class="text-electric-blue">&gt;</span> System initialized. Ready for transmission.
+      </p>
+    </div>
+
+    <h1 class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.85] mb-6">
+      <span class="block text-text-primary">Tom</span>
+      <span class="block text-transparent bg-clip-text bg-gradient-neon">
+        Schmidt
+      </span>
+    </h1>
+
+    <div class="inline-block overflow-hidden border-r-2 border-neon-purple animate-pulse-glow">
+      <p class="font-mono text-sm md:text-base text-text-secondary max-w-lg mx-auto">
+        <span class="text-neon-purple">&gt;</span> software engineer
+        <span class="text-neon-magenta"> · </span>
+        systems tinkerer
+        <span class="text-neon-magenta"> · </span>
+        cyber artisan
+      </p>
+    </div>
+
+    <div class="mt-12 flex items-center justify-center gap-6">
+      <a
+        href="/#about"
+        class="group relative inline-flex items-center gap-2 px-8 py-3 font-mono text-sm uppercase tracking-widest text-neon-purple border border-neon-purple rounded-sm transition-all duration-300 hover:bg-neon-purple hover:text-bg-primary hover:shadow-glow-purple"
+      >
+        <span class="relative z-10">Explore</span>
+        <span class="relative z-10 group-hover:translate-x-1 transition-transform duration-300">→</span>
+      </a>
+      <a
+        href="#contact"
+        class="group relative inline-flex items-center gap-2 px-8 py-3 font-mono text-sm uppercase tracking-widest text-text-muted border border-border-subtle rounded-sm transition-all duration-300 hover:text-electric-blue hover:border-electric-blue"
+      >
+        <span class="relative z-10">Connect</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+    <div class="animate-float">
+      <svg width="24" height="40" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="22" height="38" rx="11" stroke="#b026ff" stroke-width="2" opacity="0.5"/>
+        <circle cx="12" cy="14" r="3" fill="#b026ff" opacity="0.8">
+          <animate attributeName="cy" values="14;24;14" dur="2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
+</section>

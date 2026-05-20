@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import About from '../components/sections/About.astro';
+import Projects from '../components/sections/Projects.astro';
+import Skills from '../components/sections/Skills.astro';
+import Contact from '../components/sections/Contact.astro';
+---
+
+<BaseLayout title="Tom Schmidt // Neon Sanctuary">
+  <Hero />
+  <About />
+  <Projects />
+  <Skills />
+  <Contact />
+</BaseLayout>
+
+<script>
+  import { initScene } from '../components/three/SceneManager';
+  import { initCursor } from '../components/core/CursorEffect';
+
+  function initAllScenes() {
+    const containers = document.querySelectorAll('[data-scene]');
+    const cleanups = [];
+    containers.forEach((el) => {
+      const id = el.id;
+      const type = el.getAttribute('data-scene');
+      if (id && type) {
+        const cleanup = initScene(id, type);
+        if (cleanup) cleanups.push(cleanup);
+      }
+    });
+    return cleanups;
+  }
+
+  const sceneCleanups = initAllScenes();
+  const cleanupCursor = initCursor();
+
+  // Clean up on navigation
+  document.addEventListener('astro:before-swap', () => {
+    sceneCleanups.forEach((fn) => fn());
+    cleanupCursor();
+  });
+</script>

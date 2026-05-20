@@ -1,0 +1,40 @@
+---
+// Static overlay component — no client JS needed
+---
+
+<div class="scanlines-overlay pointer-events-none fixed inset-0 z-[9999]" aria-hidden="true">
+  <div class="scanline-bar"></div>
+</div>
+
+<style>
+  .scanlines-overlay {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 4px
+    );
+  }
+
+  .scanline-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(176, 38, 255, 0.008) 10%,
+      transparent 20%
+    );
+    animation: scanlineMove 8s linear infinite;
+    opacity: 0.5;
+  }
+
+  @keyframes scanlineMove {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100vh); }
+  }
+</style>

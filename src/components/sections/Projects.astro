@@ -1,0 +1,57 @@
+---
+import { projects } from '../../data/projects';
+import ThreeSceneWrapper from '../three/ThreeSceneWrapper.astro';
+
+
+---
+
+<section id="projects" class="relative w-full min-h-screen py-32 overflow-hidden">
+  <ThreeSceneWrapper containerId="projects-scene" scene="projects" />
+
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-6">
+    <p class="font-mono text-xs text-neon-magenta mb-4 tracking-widest">NODE_02 // PROJECTS</p>
+    <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-16">
+      <span class="text-transparent bg-clip-text bg-gradient-neon">Selected</span>
+      <span class="text-text-primary"> Works</span>
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      {
+        projects.map((project) => (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noreferrer"
+            class="group relative p-6 border border-border-subtle rounded-sm bg-glass-bg backdrop-blur-sm transition-all duration-500 hover:border-neon-purple hover:shadow-glow-purple overflow-hidden"
+          >
+            <div class="absolute inset-0 bg-gradient-neon opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <h3 class="text-xl font-semibold text-text-primary group-hover:text-neon-purple transition-colors duration-300">
+                  {project.name}
+                </h3>
+                <span class="font-mono text-xs text-text-muted">{project.year}</span>
+              </div>
+              <p class="font-mono text-sm text-text-secondary leading-relaxed mb-4 line-clamp-3">
+                {project.description}
+              </p>
+              <div class="flex flex-wrap gap-2">
+                {
+                  project.tags.map((tag) => (
+                    <span class="px-3 py-1 text-xs font-mono border border-border-subtle text-text-muted rounded-sm transition-colors duration-300 group-hover:border-neon-violet group-hover:text-neon-violet">
+                      {tag}
+                    </span>
+                  ))
+                }
+              </div>
+              <div class="mt-4 flex items-center gap-2 text-sm font-mono text-text-muted group-hover:text-neon-purple transition-colors duration-300">
+                <span>View project</span>
+                <span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

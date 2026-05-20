@@ -1,0 +1,12 @@
+---
+import type { SceneType } from './SceneManager'
+
+export interface Props {
+  containerId: string
+  scene: SceneType
+}
+
+const { containerId, scene } = Astro.props
+---
+
+<div id={containerId} class="absolute inset-0 w-full h-full" data-scene={scene}></div>
